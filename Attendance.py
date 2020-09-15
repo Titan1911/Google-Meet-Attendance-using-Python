@@ -29,7 +29,7 @@ if __name__ == '__main__':
       })
 
     # Sign in to google through stackoverflow
-    driver = webdriver.Chrome(options=opt, executable_path=r"Enter your path here")
+    driver = webdriver.Chrome(options=opt, executable_path=r"Enter your path here") # eg. r"C:\Users\hp\Downloads\chromedriver_win32\chromedriver.exe"
     driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')
     sleep(2)
     driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()
