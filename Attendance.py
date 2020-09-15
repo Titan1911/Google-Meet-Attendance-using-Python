@@ -28,15 +28,15 @@ if __name__ == '__main__':
         "profile.default_content_setting_values.notifications": 1
       })
 
-    # Sign in to google through stackoverflow
+    # Sign in to google
     driver = webdriver.Chrome(options=opt, executable_path=r"Enter your path here") # eg. r"C:\Users\hp\Downloads\chromedriver_win32\chromedriver.exe"
-    driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')
+    driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')  # signing in to google through stack overflow
     sleep(2)
-    driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()
-    driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)
+    driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()  # signing in with google
+    driver.find_element_by_xpath('//input[@type="email"]').send_keys(gmail_id)  # entering the gmail id
     driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
     sleep(2)
-    driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)
+    driver.find_element_by_xpath('//input[@type="password"]').send_keys(gmail_password)  # entering the password
     driver.find_element_by_xpath('//*[@id="passwordNext"]').click()
     sleep(2)
 
