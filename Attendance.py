@@ -29,7 +29,7 @@ if __name__ == '__main__':
       })
 
     # Sign in to google through stackoverflow
-    driver = webdriver.Chrome(options=opt, executable_path=r"C:\Users\hp\Downloads\chromedriver_win32\chromedriver.exe")
+    driver = webdriver.Chrome(options=opt, executable_path=r"Enter your path here")
     driver.get('https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent%27')
     sleep(2)
     driver.find_element_by_xpath('//*[@id="openid-buttons"]/button[1]').click()
@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     # Enter the meeting
     # Case when logged in with personal gmail account
-    driver.find_element_by_css_selector('input#i3').send_keys('https://meet.google.com/yjs-njdf-fyd')  # Enter a code or link
+    driver.find_element_by_css_selector('input#i3').send_keys(meet_link)  # Enter a code or link
     sleep(1)
     driver.find_element_by_css_selector('button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.ksBjEc.lKxP2d.cjtUbb').click()  # join
     sleep(2)
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
     sleep(2)
     driver.find_element_by_css_selector('div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()  # join now
-    sleep(3)
+    sleep(5)
     driver.find_element_by_css_selector('div.uArJ5e.UQuaGc.kCyAyd.QU4Gid.foXzLb.IeuGXd').click()  # participant list
     sleep(1)
     names = driver.find_elements_by_css_selector('div.cSO8I.N4cbF div.G3llDe.Dxboad div.cS7aqe.NkoVdd')  # participants
