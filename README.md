@@ -1,5 +1,5 @@
 # Google Meet Attendance
-This program reads the name of the participants and marks the attendance of people present in the meeting directly into an Excel sheet with Python. The program is utilizes selenium and pyexcel for web scraping and automation.
+This program reads the name of the participants and marks the attendance of people present in the meeting directly into an Excel sheet with Python. The program utilizes selenium and pyexcel for web scraping and automation.
 
 # Prerequisites
 Follow the following instructions to run the code in your local machine.
