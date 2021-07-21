@@ -2,7 +2,8 @@
 This program reads the name of the participants and marks the attendance of people present in the meeting directly into an Excel sheet with Python. The program utilizes selenium and pyexcel for web scraping and automation.
 
 ### Update
-If chrome isin't allowing to signin then make a new gmail ID and try with that, or a different ID with which test browser has not yet been opened, or just clear all the cache for the existing ID (not reccomended).  
+With the new version of chromedriver, problems with sign in may be faced. Follow the below steps for smooth run of the program:
+If chrome isin't allowing to sign in then make a new gmail ID and try with that, or a different ID with which test browser has not yet been opened, or just clear all the cache for the existing ID (not reccomended).
 
 # Prerequisites
 Follow the following instructions to run the code in your local machine.
