@@ -6,13 +6,15 @@ from openpyxl import load_workbook
 from openpyxl.utils import column_index_from_string
 # time import
 from time import sleep
+# installing packages import
 import os
-import subprocess
-import sys
 
+
+# The function directly installs the required libraries
 def install(package):
     os.system("pip install " + str(package))
     print("Installed", package.upper())
+
 
 if __name__ == '__main__':
     install("openpyxl")
