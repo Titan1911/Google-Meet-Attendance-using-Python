@@ -12,15 +12,6 @@ Follow the following instructions to run the code in your local machine.
 ### Chromedriver
 Install the web driver using [Google ChromeDriver](https://chromedriver.chromium.org/) link. Unzip the file, copy the path of the folder and paste it in line 32 of the code. An example is given in the code itself.
 
-### Selenium
-Install this package by typing the following code in terminal :
-
-`pip install selenium`
-
-### Openpyxl
-Install this package by typing the following code in terminal :
-
-`pip install openpyxl`
 
 Create an Excel workbook named `Google_Attendance`. Add a sheet named `Attendance Sheet`. Create the sheet in the following manner :
 
