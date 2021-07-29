@@ -6,9 +6,18 @@ from openpyxl import load_workbook
 from openpyxl.utils import column_index_from_string
 # time import
 from time import sleep
+import os
+import subprocess
+import sys
+
+
+def install(package):
+    os.system("pip install " + str(package))
+    print("Installed", package.upper())
 
 if __name__ == '__main__':
-
+    install("openpyxl")
+    install("selenium")
     gmail_id = input('Enter your gmail id: ')
     gmail_password = input('Enter your gmail password: ')
     meet_link = input('Paste the link of the Google Meet: ')
