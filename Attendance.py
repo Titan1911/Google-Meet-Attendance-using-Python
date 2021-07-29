@@ -10,7 +10,6 @@ import os
 import subprocess
 import sys
 
-
 def install(package):
     os.system("pip install " + str(package))
     print("Installed", package.upper())
@@ -64,13 +63,13 @@ if __name__ == '__main__':
     sleep(2)
     driver.find_element_by_css_selector('div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt').click()  # join now
     sleep(5)
-    driver.find_element_by_css_selector('div.uArJ5e.UQuaGc.kCyAyd.QU4Gid.foXzLb.IeuGXd').click()  # participant list
+    driver.find_element_by_xpath('//*[@id="ow3"]/div[1]/div/div[9]/div[3]/div[10]/div[3]/div[2]/div/div/div[2]/span/button/i[1]').click()  # participant list
     sleep(1)
-    names = driver.find_elements_by_css_selector('div.cSO8I.N4cbF div.G3llDe.Dxboad div.cS7aqe.NkoVdd')  # participants
+    names = driver.find_elements_by_css_selector('span.ZjFb7c')  # participants
     for e in names[1:]:
         print(e.text)
 
-    n = int(driver.find_element_by_css_selector('div.eUyZxf span.rua5Nb').text.strip('(').strip(')'))  # no. of participants present
+    # n = int(driver.find_element_by_css_selector('div.eUyZxf span.rua5Nb').text.strip('(').strip(')'))  # no. of participants present
 
     wb = load_workbook('Google_Attendance.xlsx')
     sheet = wb['Attendance Sheet']
@@ -81,5 +80,5 @@ if __name__ == '__main__':
                 sheet[f'B{box}'] = 'Present'  # marks present of that participant
 
     wb.save('Google_Attendance.xlsx')
-    print(f'No. of participants : {n-1}')  # 1 participant adds up while taking attendance
+    # print(f'No. of participants : {n-1}')  # 1 participant adds up while taking attendance
     print('Attendance taken successfully!')
